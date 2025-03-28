@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - Gamacare Health Center</title>
+  <!-- Link your main CSS file (e.g., style.css) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <!-- Replace with your own logo image if available -->
+        <img src="logo.png" alt="Gamacare Logo" />
+        <span class="brand-name">Gamacare</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <!-- Book Appointment Button -->
+      <button class="appointment-btn" onclick="window.location.href='login.html'">
+        Book Appointment
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="services-main"><!-- Using .services-main for consistent layout spacing -->
+    
+    <!-- Hero / Intro Section -->
+    <section class="about-hero">
+      <h1>Exceptional Care, Every Time</h1>
+      <p>
+        At our clinic, we prioritize your health and well-being above all else. 
+        Our team is committed to providing comprehensive and compassionate care 
+        tailored to your individual needs.
+      </p>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="about-story">
+      <h2>Our Story</h2>
+      <p>
+        Founded in 2008, our clinic has been dedicated to providing 
+        exceptional healthcare ever since. Driven by a passion for helping 
+        others, we have created a supportive environment for patients 
+        and their families.
+      </p>
+    </section>
+
+    <!-- Services Offered Section -->
+    <section class="about-services">
+      <h2>Services</h2>
+      <h3>Services Offered</h3>
+      <div class="services-grid">
+        <!-- Same data-service keys as in script.js for the modal logic -->
+        <div class="service-card" data-service="labTests">Laboratory Tests</div>
+        <div class="service-card" data-service="xray">X-RAY</div>
+        <div class="service-card" data-service="ecg">ECG</div>
+        <div class="service-card" data-service="echo">2-D Echo</div>
+        <div class="service-card" data-service="ultrasound">Ultrasound</div>
+        <div class="service-card" data-service="swab">Swab and Blood</div>
+      </div>
+    </section>
+
+    <!-- Approach to Care Section -->
+    <section class="about-approach">
+      <h2>Our Approach to Care</h2>
+      <p>
+        We take a holistic approach to healthcare, focusing on the mind, body, 
+        and spirit. Our clinic stays up-to-date with the latest medical 
+        advancements and technology to ensure the best care for our patients.
+      </p>
+    </section>
+
+    <!-- Community Engagement Section -->
+    <section class="about-community">
+      <h2>Community Engagement</h2>
+      <p>
+        We are dedicated to improving our community through outreach programs, 
+        health fairs, and support services for initiatives aimed at 
+        enhancing overall well-being.
+      </p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="about-contact">
+      <h2>Contact Us</h2>
+      <form class="contact-form" action="#" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required />
+
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
+
+        <label for="message">Your Message or Questions</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit" class="book-btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- MODAL STRUCTURE: with fields for service + doctor info -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <!-- Service Info -->
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <hr />
+      <!-- Doctor Info -->
+      <h4 id="doctorName"></h4>
+      <p id="doctorQualifications"></p>
+      <p id="doctorExperience"></p>
+      <p id="doctorHospital"></p>
+      <p id="doctorSpecialtyAreas"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- Footer -->
+<footer>
+  <div class="footer-left">
+    <select name="language" id="languageSelect">
+      <option value="en" selected>English</option>
+      <option value="tl">Tagalog</option>
+      <option value="ceb">Cebuano</option>
+    </select>
+    <p>© 2025 Gamacare · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a></p>
+  </div>
+</footer>
+
+
+  <!-- Link your JS file (reuse script.js with extended doctor info) -->
+  <script src="script.js"></script>
+</body>
+</html>

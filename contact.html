@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us - Gamacare Health Center</title>
+  <!-- Link your main CSS file (style.css) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <!-- Replace with your own logo image if available -->
+        <img src="logo.png" alt="Gamacare Logo" />
+        <span class="brand-name">Gamacare</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a class="active" href="contact.html">Contact Us</a></li>
+      </ul>
+      <button class="appointment-btn" onclick="window.location.href='login.html'">
+        Book Appointment
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="contact-main">
+    <!-- Contact Intro -->
+    <section class="contact-intro">
+      <h1>Contact Us</h1>
+      <p>
+        Amparo Subd, 635 Malanting, cor Binayuyo, Novaliches, Caloocan, 1425 Metro Manila
+        <br />
+        Phone: 0927 503 3725
+      </p>
+    </section>
+
+    <!-- Contact Card Container -->
+    <section class="contact-card">
+      <!-- Contact Form on the left -->
+      <div class="contact-form-wrapper">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="#" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@gmail.com" required />
+
+          <label for="question">Question</label>
+          <textarea id="question" name="question" rows="4" placeholder="Enter question or feedback" required></textarea>
+
+          <button type="submit" class="book-btn">Submit</button>
+        </form>
+      </div>
+
+      <!-- Map on the right -->
+      <div class="map-container">
+        <!-- Embed a Google Map (replace src with your own location embed link) -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.823627388096!2d121.02778921516594!3d14.70427248972939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b00ed5d299bd%3A0x91c770179d9f71c9!2sNovaliches%2C%20Quezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1674025076439!5m2!1sen!2sph"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <!-- Footer -->
+<footer>
+  <div class="footer-left">
+    <select name="language" id="languageSelect">
+      <option value="en" selected>English</option>
+      <option value="tl">Tagalog</option>
+      <option value="ceb">Cebuano</option>
+    </select>
+    <p>© 2025 Gamacare · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a></p>
+  </div>
+</footer>
+
+
+  <!-- Link your JavaScript file (reuse script.js) -->
+  <script src="script.js"></script>
+</body>
+</html>

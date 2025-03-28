@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services - Gamacare Health Center</title>
+  <!-- Link your main CSS file (e.g., style.css) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Gamacare Logo" />
+        <span class="brand-name">Gamacare</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <!-- Book Appointment Button -->
+      <button class="appointment-btn" onclick="window.location.href='login.html'">
+        Book Appointment
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="services-main">
+    <!-- Page Title / Hero Section -->
+    <section class="services-hero">
+      <h1>Comprehensive Healthcare Services at Gamacare Health Center</h1>
+      <p>
+        At Gamacare Health Center, we prioritize your health and well-being above all else. 
+        With a team of dedicated professionals and state-of-the-art facilities, we are 
+        committed to providing you with the highest quality of care. Whether you need a 
+        routine check-up or specialized treatment, our comprehensive range of services 
+        is designed to meet your individual health needs.
+      </p>
+    </section>
+
+    <!-- Services Detail Section -->
+    <section class="services-details">
+      <div class="service-detail">
+        <h2>General Checkups</h2>
+        <p>
+          Regular checkups are essential for maintaining your health. At Gamacare Health Center, 
+          we recommend annual visits to monitor your well-being and catch any potential issues early.
+        </p>
+      </div>
+
+      <div class="service-detail">
+        <h2>Specialist Consultations</h2>
+        <p>
+          Our team of specialists is here to provide you with the expert care you need. 
+          From cardiology to orthopedics, we offer a wide range of consultations. 
+          Appointments can be made easily through our front desk or online portal.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Offered Section -->
+    <section class="services-offered">
+      <h2>Services Offered</h2>
+      <div class="services-grid">
+        <!-- Each service card has a data-service attribute used in JS -->
+        <div class="service-card" data-service="labTests">Laboratory Tests</div>
+        <div class="service-card" data-service="xray">X-RAY</div>
+        <div class="service-card" data-service="ecg">ECG</div>
+        <div class="service-card" data-service="echo">2-D Echo</div>
+        <div class="service-card" data-service="ultrasound">Ultrasound</div>
+        <div class="service-card" data-service="swab">Swab and Blood</div>
+      </div>
+    </section>
+
+    <!-- MODAL STRUCTURE: includes extra fields for doctor info -->
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <!-- Service Info -->
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <hr />
+        <!-- Doctor Info -->
+        <h4 id="doctorName"></h4>
+        <p id="doctorQualifications"></p>
+        <p id="doctorExperience"></p>
+        <p id="doctorHospital"></p>
+        <p id="doctorSpecialtyAreas"></p>
+      </div>
+    </div>
+
+    <!-- CTA / Appointment Booking Section -->
+    <section class="services-cta">
+      <h2>Book Your Appointment</h2>
+      <p>
+        Experience top-notch healthcare today. Schedule a visit or contact us to learn more about our services. 
+        Our dedicated staff is here to help you every step of the way.
+      </p>
+      <button class="appointment-btn" onclick="window.location.href='booking.html'">
+        Schedule Now
+      </button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+ <!-- Footer -->
+<footer>
+  <div class="footer-left">
+    <select name="language" id="languageSelect">
+      <option value="en" selected>English</option>
+      <option value="tl">Tagalog</option>
+      <option value="ceb">Cebuano</option>
+    </select>
+    <p>© 2025 Gamacare · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a></p>
+  </div>
+</footer>
+
+
+  <!-- Link to your updated JS -->
+  <script src="script.js"></script>
+</body>
+</html>
