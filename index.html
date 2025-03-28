@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gamacare Health Center Patient Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Gamacare Logo" height="40" />
+        <span class="brand-name">Gamacare Health Center</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <button class="appointment-btn" onclick="window.location.href='login.html'">
+        Book Appointment
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+ <section class="hero" style="background-image: url('hero-home.webp'); background-size: cover; background-position: center;">
+    <div class="hero-content">
+      <h1 id="heroTitle">Welcome to Gamacare</h1>
+      <p id="heroSubtitle">Your trusted partner in health and wellness</p>
+      <button class="cta-btn" onclick="window.location.href='login.html'">Book Appointment</button>
+    </div>
+  </section>
+
+  <!-- Helpful Links Section -->
+  <section class="helpful-links">
+    <h2 id="helpfulLinksTitle">Helpful Links</h2>
+    <div class="info-section">
+      <div class="info-card">
+        <a href="services.html">
+          <i class="fa-solid fa-building fa-2x"></i>
+          <h3 id="servicesLink">Services</h3>
+        </a>
+      </div>
+      <div class="info-card">
+        <a href="about.html">
+          <i class="fa-solid fa-circle-info fa-2x"></i>
+          <h3 id="aboutLink">About Us</h3>
+        </a>
+      </div>
+      <div class="info-card">
+        <a href="contact.html">
+          <i class="fa-solid fa-phone fa-2x"></i>
+          <h3 id="contactLink">Contact Us</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <select name="language" id="languageSelect">
+        <option value="en" selected>English</option>
+        <option value="tl">Tagalog</option>
+        <option value="ceb">Cebuano</option>
+      </select>
+      <p>© 2025 Gamacare · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        heroTitle: "Welcome to Gamacare",
+        heroSubtitle: "Your trusted partner in health and wellness",
+        helpfulLinksTitle: "Helpful Links",
+        servicesLink: "Services",
+        aboutLink: "About Us",
+        contactLink: "Contact Us"
+      },
+      tl: {
+        heroTitle: "Maligayang pagdating sa Gamacare",
+        heroSubtitle: "Ang iyong pinagkakatiwalaang kasama sa kalusugan at kagalingan",
+        helpfulLinksTitle: "Mga Kapaki-pakinabang na Link",
+        servicesLink: "Mga Serbisyo",
+        aboutLink: "Tungkol sa Amin",
+        contactLink: "Makipag-ugnayan sa Amin"
+      },
+      ceb: {
+        heroTitle: "Maayong pag-abot sa Gamacare",
+        heroSubtitle: "Ang imong kasaligan nga kauban sa kahimsog ug kaayohan",
+        helpfulLinksTitle: "Mapuslanong mga Link",
+        servicesLink: "Mga Serbisyo",
+        aboutLink: "Mahitungod Kanamo",
+        contactLink: "Kontaka Kami"
+      }
+    };
+
+    document.getElementById('languageSelect').addEventListener('change', function() {
+      const lang = this.value;
+      document.getElementById('heroTitle').textContent = translations[lang].heroTitle;
+      document.getElementById('heroSubtitle').textContent = translations[lang].heroSubtitle;
+      document.getElementById('helpfulLinksTitle').textContent = translations[lang].helpfulLinksTitle;
+      document.getElementById('servicesLink').textContent = translations[lang].servicesLink;
+      document.getElementById('aboutLink').textContent = translations[lang].aboutLink;
+      document.getElementById('contactLink').textContent = translations[lang].contactLink;
+    });
+  </script>
+</body>
+</html>
